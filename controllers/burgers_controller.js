@@ -3,28 +3,32 @@ var orm = require('../config/orm');
 
 module.exports = function (app) {
 
-    app.get('/', function(req, res) {
+    app.get('/', function (req, res) {
         var eaten;
-        orm.selectAll(function(res){
-            eaten = res;
+        orm.selectAll(function (result) {
+
+            res.render("index", {
+                eatenBurgers: result
+
+            });
+
+            console.log(result);
+
         });
-        console.log(eaten);
-        res.render("index", {
-            eatenBurgers: eaten
-        });
+
     });
 
-    app.get('/api/getburgers', function(req, res) {
+    app.get('/api/getburgers', function (req, res) {
         //get burgers api
         res.json(req.body);
     });
 
-    app.post('/api/newburger', function(req, res) {
+    app.post('/api/newburger', function (req, res) {
         //post new burger api
         burger.insertBurger(req.body);
     });
 
-    app.post('/api/updateburger', function(req, res) {
+    app.post('/api/updateburger', function (req, res) {
         //update a burger api
     });
 
