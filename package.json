@@ -22,6 +22,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "express-handlebars": "^3.0.0",
     "mysql": "^2.15.0",
     "path": "^0.12.7"
@@ -32,4 +33,10 @@
   },
   "devDependencies": {}
 >>>>>>> 84af05160f5ff8aaa2b7097e2fbfa686b7401972
+=======
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0",
+    "path": "^0.12.7"
+  }
+>>>>>>> bfc145033e8ce61390a02d21821012173880bf82
 }
