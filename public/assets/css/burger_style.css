@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    align-content: center;
+}
+
+.col-md-4 {
+    background-color: green;
+    height: 75vh;
+    vertical-align: center;
+    width: 30%;
+    
+    display: flex;
+    align-content: space-between;
+    justify-content: space-evenly;
+
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
