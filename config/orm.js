@@ -18,12 +18,14 @@ module.exports = {
         });
     },
 
-    updateOne: function () {
+    updateOne: function (id, burgerName, devoured) {
         var query = 'UPDATE burgers ' + 
-                    'SET burgerNAME = ?'
-        connection.query('UPDATE burgers SET ', function (err, res) {
+                    'SET burgerNAME = ?' +
+                    'WHERE id = ?'
+        connection.query(query, function (err, res) {
             if (err) throw err;
 
+            res.send(res.affectedRows);
         });
     }
 }
