@@ -1,12 +1,18 @@
 require("./connection");
 
+connection.connect(function(err) {
+    if (err) throw err;
+
+    console.log("connected as id " + connection.threadId);
+});
+
 module.exports = {
 
-    selectAll: function () {
+    selectAll: function (callback) {
         connection.query('SELECT * FROM burgers', function (err, res) {
             if (err) throw err;
 
-            console.log(res[0].id);
+            callback(res);
         });
     },
 
