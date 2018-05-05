@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 app.use('/assets', express.static('public/assets'));
 
 var bcontroller = require("./controllers/burgers_controller")(app);
+
 app.listen(PORT, function() {
     console.log("server now running on port " + PORT);
 });
