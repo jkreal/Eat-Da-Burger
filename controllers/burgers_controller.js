@@ -4,11 +4,11 @@ var orm = require('../config/orm');
 module.exports = function (app) {
 
     app.get('/', function (req, res) {
-        var eaten;
+
         orm.selectAll(function (result) {
 
             res.render("index", {
-                eatenBurgers: result
+                burgers: result
 
             });
 

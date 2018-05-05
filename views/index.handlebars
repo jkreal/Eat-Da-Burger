@@ -7,15 +7,15 @@
     <div class="col-md-4 col-left">
         <h2>
         <ul>
-            {{#each eatenBurgers}}
-            <li>{{this.id}} {{this.burger_name}}</li>
+            {{#each burgers}}
+            <li><a class="burger">{{this.id}}. {{this.burger_name}}</a></li>
             {{/each}}
         </ul>
 
         </h2>
     </div>
     <div class="col-md-4 col-center">
-        Test2
+        
     </div>
     <div class="col-md-4 col-right">
         Test3
