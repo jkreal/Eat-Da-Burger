@@ -4,7 +4,7 @@ var path = require("path");
 
 var orm = require("./config/orm");
 var app = express();
-var bcontroller = require("./controllers/burgers_controller")(app);
+
 var PORT = process.env.PORT || 3001;
 
 var exphbs = require("express-handlebars");
@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 app.use('/assets', express.static('public/assets'));
 
-
+var bcontroller = require("./controllers/burgers_controller")(app);
 app.listen(PORT, function() {
     console.log("server now running on port " + PORT);
 });
