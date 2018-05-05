@@ -1,6 +1,6 @@
-USE burgers_db;
+USE twvba86k6qns43xi;
 
-INSERT INTO burgers 
+INSERT INTO burgers
 	(burger_name, devoured)
 VALUES 
 	('Kahuna Burger', false),

@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS burgers_db;
-USE burgers_db;
+
+USE twvba86k6qns43xi;
 
 CREATE TABLE IF NOT EXISTS burgers (
 	id INT(32) AUTO_INCREMENT NOT NULL,
