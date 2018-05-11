@@ -5,28 +5,31 @@ module.exports = function (app) {
 
 	app.get('/', function (req, res) {
 		orm.selectAll(function (result) {
-
-			res.render("index", {
-				burgers: result
-			});
-
-			console.log(result);
-
-		});
+			orm.selectAll(function (result2) {
+				res.render("index", {
+					burgers: result,
+					devoured_burgers: result2
+				});
+			}, false);
+		}, true);
 
 	});
 
 	app.get('/api/getburgers', function (req, res) {
-		//get burgers api
-		res.json(req.body);
-	});
+			//get burgers api
+			orm.selectAll(function(result) {
+				res.json(result);
+			});
+		});
 
 	app.post('/api/newburger', function (req, res) {
 		//post new burger api
-		burger.insertBurger(req.body);
+		orm.insertOne(function(result) {
+
+		});
 	});
 
-	app.post('/api/updateburger', function (req, res) {
+	app.put('/api/updateburger', function (req, res) {
 		//update a burger api
 	});
 
